@@ -58,3 +58,26 @@ From Emotion emotion;
 	SUM (poem.WordCount) AS 'Total Words in Poems'
 	FROM Poem poem;
 
+8)
+	
+	Select
+		poem.Title,
+		poem.WordCount
+		FROM Poem poem
+		Where poem.WordCount = 
+		(
+		SELECT MAX (WordCount) from poem
+		);
+
+9)
+
+	Select
+		author.Id,
+		author.GradeId,
+		grade.Id,
+		grade.Name
+		From Author author
+		Where Grade grade grade.Id = author.GradeId;
+		
+
+
